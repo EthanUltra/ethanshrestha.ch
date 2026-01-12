@@ -1,0 +1,27 @@
+-- Changed 30.12.2025 --
+
+<p class="text-lg mb-4 leading-relaxed">
+              I’m currently studying to become an
+              <em>Application Developer</em> and have spent the last four
+              years learning by building. My journey began with curiosity for
+              technology and has evolved through self‑directed projects and
+              coursework. I’m passionate about building applications and
+              learning how to secure them, and I embrace learning by
+              doing—exploring new tools and solving problems hands‑on.
+            </p>
+            <p class="text-lg mb-4 leading-relaxed">
+              I enjoy crafting solutions using languages like Java, Python and
+              JavaScript and frameworks such as React and Node.js. Whether I’m
+              putting together a full‑stack prototype, automating a workflow
+              with Docker or exploring networking tools like Wireshark and
+              Burp&nbsp;Suite, my focus is on writing maintainable code and
+              understanding the underlying concepts rather than just piecing
+              things together.
+            </p>
+            <p class="text-lg mb-4 leading-relaxed">
+              Beyond technical skills, I value collaboration, communication and
+              creativity. I’m a lifelong learner who thrives on teamwork while
+              also looking for opportunities to lead small projects and share
+              what I’ve learned. I’m excited about pushing boundaries in
+              software development while practising secure coding and
+              accessibility from the start.

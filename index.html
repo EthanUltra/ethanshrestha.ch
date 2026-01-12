@@ -1,0 +1,2117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Updated meta tags to emphasize apprenticeship/internship search and passion for cybersecurity -->
+    <meta
+      name="description"
+      content="Portfolio of Ethan Shrestha – an aspiring application developer and cybersecurity enthusiast with about 2–3 years of hands‑on learning, actively seeking apprenticeship and internship opportunities. Explore projects, report books, skills, certifications and more."
+    />
+    <meta
+      name="keywords"
+      content="Ethan Shrestha, Application Developer, Cybersecurity, Portfolio, Projects, Certifications, Apprenticeship, Internship, Report Books"
+    />
+    <meta name="author" content="Ethan Shrestha" />
+    <link rel="icon" type="image/x-icon" href="./E-S.png.webp" />
+    <link rel="canonical" href="https://ethanshrestha.ch" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>
+      Ethan Shrestha – Aspiring Application Developer &amp; Cybersecurity
+      Enthusiast
+    </title>
+
+    <!-- Tailwind CSS for rapid, responsive styling -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Animate.css for subtle animations -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Translate initialization -->
+    <script type="text/javascript">
+      // Initialise the Google Translate widget when the API loads
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', autoDisplay: false },
+          'google_translate_element'
+        )
+      }
+      // Trigger translation when selecting a language from our custom list
+      function doGTranslate(lang_pair) {
+        if (!lang_pair) return
+        var selects = document.getElementsByTagName('select')
+        for (var i = 0; i < selects.length; i++) {
+          if (selects[i].className.indexOf('goog-te-combo') !== -1) {
+            selects[i].value = lang_pair.split('|')[1]
+            selects[i].dispatchEvent(new Event('change'))
+            break
+          }
+          if (document.activeElement) {
+            document.activeElement.blur();
+          }
+        }
+      }
+      // Hide Google’s default banner if it appears
+      function hideGoogleTranslateBanner() {
+        var banner = document.querySelector('iframe.goog-te-banner-frame')
+        if (banner) banner.style.display = 'none'
+        var container = document.querySelector(
+          '.goog-te-banner-frame.skiptranslate'
+        )
+        if (container) container.style.display = 'none'
+        document.body.style.top = '0px'
+      }
+      window.addEventListener('load', function () {
+        setInterval(hideGoogleTranslateBanner, 500)
+      })
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      defer
+    ></script>
+
+    <!-- Custom Styles -->
+    <style>
+      :root {
+        --bg-dark: #0a192f;
+        --bg-darker: #112240;
+        --primary: #00f3ff;
+        --secondary: #4f46e5;
+        --text-light: #e2e8f0;
+        --text-muted: #94a3b8;
+      }
+      /* Utility classes for custom background colors using CSS variables */
+      body, .text-light {
+        color: var(--text-light);
+      }
+      .bg-bg-dark {
+        background-color: var(--bg-dark);
+      }
+      .bg-bg-darker {
+        background-color: var(--bg-darker);
+      }
+      html,
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        width: 100%;
+      }
+      /* Hide default Google Translate widget */
+      #google_translate_element {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+      }
+
+      body > .goog-te-banner-frame,
+      body > .skiptranslate,
+      .goog-te-gadget-icon,
+      .goog-te-menu-value span,
+      .goog-tooltip,
+      .goog-tooltip:hover,
+      .goog-te-balloon-frame {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+      }
+
+      body {
+        top: 0px !important;
+      }
+
+      /* Navigation styles */
+      nav {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+      .nav-link {
+        position: relative;
+        padding-bottom: 0.25rem;
+        transition: color 0.3s ease;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      /* Scroll progress bar */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        z-index: 1000;
+      }
+      /* Skill bar backgrounds */
+      .skill-bar {
+        height: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 9999px;
+        overflow: hidden;
+      }
+      .skill-bar span {
+        display: block;
+        height: 100%;
+        background-image: linear-gradient(
+          90deg,
+          var(--primary),
+          var(--secondary)
+        );
+        border-radius: 9999px;
+      }
+      /* Floating dots used on hero for subtle animation */
+      .dot {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      h2 {
+        line-height: 1.2;       /* a little extra breathing room */
+        margin-bottom: 1.5rem;  /* or add more space below */
+        /* or */
+        padding-bottom: 0.25rem;
+      }
+
+      /* Focus outlines for keyboard accessibility */
+      a:focus,
+      button:focus,
+      input:focus
+      textarea:focus {
+        /* outline: 2px solid var(--primary); */
+        outline-offset: 2px;
+      }
+
+      /* Allow clicking through background effects to interact with forms/buttons */
+      #matrixCanvas,
+      #particleCanvas {
+        pointer-events: none;
+      }
+
+      /* Light mode theme overrides using CSS variables */
+      .light-mode {
+      --bg-dark: #f8fafc;
+      --bg-darker: #ffffff;
+      --primary: #0ea5e9;
+      --secondary: #6366f1;
+      --text-light: #1e293b; /* Darker text for contrast */
+      --text-muted: #475569;
+      color: var(--text-light);
+      background-color: var(--bg-darker);
+      }
+      .light-mode a,
+      .light-mode p,
+      .light-mode h1,
+      .light-mode h2,
+      .light-mode h3,
+      .light-mode span,
+      .light-mode button {
+      color: var(--text-light) !important;
+      }
+
+      img {
+        -webkit-user-drag: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+      .cert-description {
+        margin-top: 2rem;
+      }
+
+      #dotsContainer {
+        overflow: hidden;
+      }
+      
+    </style>
+  </head>
+  <body class="relative">
+    <!-- Scroll progress indicator -->
+    <div id="scrollProgress" class="scroll-progress" style="width: 0"></div>
+
+    <!-- Background canvas effects -->
+    <canvas
+      id="matrixCanvas"
+      class="fixed inset-0 w-full h-full z-0 opacity-10"
+      aria-hidden="true"
+    ></canvas>
+    <canvas
+      id="particleCanvas"
+      class="fixed inset-0 w-full h-full z-0"
+      aria-hidden="true"
+    ></canvas>
+
+    <!-- Navigation -->
+    <nav
+      id="mainNav"
+      class="w-full fixed top-0 left-0 z-50 py-4 px-4 md:px-8 flex items-center justify-between text-sm text-gray-300 bg-black bg-opacity-40"
+      role="navigation"
+    >
+      <div class="flex items-center space-x-4">
+        <!-- Logo
+        <a href="#home" class="text-2xl font-bold text-white">
+          <span class="text-primary">&lt;</span>ES<span class="text-primary"
+            >/&gt;</span
+          >
+        </a>
+        -->
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="nav-link hover:text-white" aria-label="Home"
+            >Home</a
+          >
+          <a href="#about" class="nav-link hover:text-white" aria-label="About"
+            >About Me</a
+          >
+          <!-- New navigation link for apprenticeship report books -->
+          <a
+            href="#reports"
+            class="nav-link hover:text-white"
+            aria-label="Reports"
+            >Report&nbsp;Books</a
+          >
+          <a
+            href="#experience"
+            class="nav-link hover:text-white"
+            aria-label="Experience"
+            >Experience</a
+          >
+          <a
+            href="#skills"
+            class="nav-link hover:text-white"
+            aria-label="Skills"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link hover:text-white"
+            aria-label="Projects"
+            >Projects</a
+          >
+          <a
+            href="#cybersecurity"
+            class="nav-link hover:text-white"
+            aria-label="Cybersecurity"
+            >Cybersecurity</a
+          >
+          <a
+            href="#certifications"
+            class="nav-link hover:text-white"
+            aria-label="Certifications"
+            >Certifications</a
+          >
+          <!--
+          <a href="#blog" class="nav-link hover:text-white" aria-label="Blog"
+            >Blogs</a
+          >
+          -->
+          <a
+            href="#contact"
+            class="nav-link hover:text-white"
+            aria-label="Contact"
+            >Contact</a
+          >
+          <!-- Language dropdown on desktop -->
+          <div class="relative">
+            <button
+              id="langToggleDesktop"
+              class="nav-link hover:text-white flex items-center space-x-1"
+              aria-label="Languages"
+            >
+              <span>Languages</span>
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <div
+              id="langMenuDesktop"
+              class="hidden absolute right-0 mt-2 w-40 bg-gray-800 border border-gray-700 rounded-md shadow-lg overflow-hidden z-40"
+            >
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|en')"
+              >
+                English
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|de')"
+              >
+                German
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|fr')"
+              >
+                French
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|es')"
+              >
+                Spanish
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|zh-CN')"
+              >
+                Chinese
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|ja')"
+              >
+                Japanese
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|hi')"
+              >
+                Hindi
+              </button>
+              <button
+                class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+                onclick="doGTranslate('en|ru')"
+              >
+                Russian
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Action buttons on desktop -->
+      <div class="hidden md:flex space-x-4 items-center">
+        <button
+          id="toggleThemeDesktop"
+          class="border-2 border-primary text-primary px-3 py-1 rounded-md font-semibold hover:bg-primary hover:text-bg-dark transition-colors duration-300"
+        >
+          Light Mode
+        </button>
+        <button
+          id="toggleEffectsDesktop"
+          class="border-2 border-primary text-primary px-3 py-1 rounded-md font-semibold hover:bg-primary hover:text-bg-dark transition-colors duration-300"
+        >
+          Turn Off Effects
+        </button>
+      </div>
+      <!-- Mobile menu toggle -->
+      <div class="md:hidden">
+        <button id="mobileMenuToggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars fa-lg text-gray-300"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile navigation panel -->
+    <div
+      id="mobileMenu"
+      class="md:hidden bg-bg-darker p-4 hidden fixed top-8 left-0 right-0 max-h-screen overflow-y-auto z-40"
+      aria-label="Mobile menu"
+    >
+      <a href="#home" class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Home</a
+      >
+      <a href="#about" class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >About Me</a
+      >
+      <a href="#skills" class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Skills</a
+      >
+      <a
+        href="#projects"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Projects</a
+      >
+      <a
+        href="#cybersecurity"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Cybersecurity</a
+      >
+      <a
+        href="#certifications"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Certifications</a
+      >
+      <!-- Added mobile navigation link for report books -->
+      <a
+        href="#reports"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Report&nbsp;Books</a
+      >
+      <a
+        href="#experience"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Experience</a
+      >
+      <!--
+      <a href="#blog" class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Blogs</a
+      >
+      -->
+      <a
+        href="#contact"
+        class="block px-4 py-2 text-gray-300 hover:text-primary"
+        >Contact</a
+      >
+      <!-- Language dropdown on mobile -->
+      <div class="mt-4">
+        <button
+          id="langToggleMobile"
+          class="w-full text-left px-4 py-2 text-gray-300 hover:text-primary"
+        >
+          Languages <i class="fas fa-caret-down ml-1"></i>
+        </button>
+        <div
+          id="langMenuMobile"
+          class="hidden mt-2 border border-gray-700 rounded-md overflow-hidden"
+        >
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|en')"
+          >
+            English
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|de')"
+          >
+            German
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|fr')"
+          >
+            French
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|es')"
+          >
+            Spanish
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|zh-CN')"
+          >
+            Chinese
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|ja')"
+          >
+            Japanese
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|hi')"
+          >
+            Hindi
+          </button>
+          <button
+            class="block w-full px-4 py-2 text-left text-gray-300 hover:bg-gray-700"
+            onclick="doGTranslate('en|ru')"
+          >
+            Russian
+          </button>
+        </div>
+      </div>
+      <!-- Theme & effects toggles on mobile -->
+      <div class="mt-4 space-y-2">
+        <button
+          id="toggleThemeMobile"
+          class="block w-full border-2 border-primary text-primary py-2 rounded-md font-semibold hover:bg-primary hover:text-bg-dark"
+        >
+          Light Mode
+        </button>
+        <button
+          id="toggleEffectsMobile"
+          class="block w-full border-2 border-primary text-primary py-2 rounded-md font-semibold hover:bg-primary hover:text-bg-dark"
+        >
+          Turn Off Effects
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero section -->
+    <header
+      id="home"
+      class="min-h-screen flex flex-col justify-center items-center text-center relative px-4 overflow-hidden"
+    >
+      <!-- Floating dots container -->
+      <div
+        id="dotsContainer"
+        class="absolute inset-0 pointer-events-none"
+      >
+      <!-- Decorative cyber background image for hero -->
+      <img
+        src="./78a93361-afaf-427d-902d-81973f2c525f.png"
+        alt="Abstract cyber network background"
+        class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-
+        events-none"
+        oncontextmenu="return false;" 
+        draggable="false"
+      />
+      </div>
+      <h1
+        class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-4 relative z-10"
+      >
+        Ethan Shrestha
+      </h1>
+      <!-- Dynamic typed effect for roles -->
+      <p
+        class="text-xl sm:text-2xl md:text-3xl text-primary mb-2 font-mono relative z-10"
+      >
+        <span id="typedText"></span>
+      </p>
+      <!-- Secondary tagline emphasising apprenticeship/internship search -->
+      <p
+        class="text-base sm:text-lg md:text-xl text-gray-400 mb-8 relative z-10 max-w-2xl"
+      >
+        Looking for an apprenticeship or internship where I can apply and expand
+        what I’ve learned in application development and cybersecurity.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="#about"
+          class="px-6 py-3 space-x-2 border border-gray-600 px-4 py-2 rounded-md text-gray-200 hover:border-primary hover:text-primary transition-colors duration-300"
+          aria-label="Explore my work"
+          rel="noopener noreferrer"
+          >Explore My Work</a
+        >
+        <a
+          href="https://drive.google.com/file/d/1o50etGiEbAVcLlOfDL7AvXm3vkLbFR1F/view?usp=sharing"
+          target="_blank"
+          class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md font-semibold hover:shadow-lg transition-transform transform hover:scale-105"
+          aria-label="Download resume"
+          rel="noopener noreferrer"
+          >Download Resume</a
+        >
+      </div>
+      <!-- Social links -->
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/ethan-shrestha-6115631b9/"
+          target="_blank"
+          class="flex items-center space-x-2 border border-gray-600 px-4 py-2 rounded-md text-gray-200 hover:border-primary hover:text-primary transition-colors duration-300"
+          aria-label="LinkedIn"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+        </a>
+        <a
+          href="https://github.com/EthanUltra"
+          target="_blank"
+          class="flex items-center space-x-2 border border-gray-600 px-4 py-2 rounded-md text-gray-200 hover:border-primary hover:text-primary transition-colors duration-300"
+          aria-label="GitHub"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i><span>GitHub</span>
+        </a>
+        <a
+          href="https://gitlab.com/EthanShrestha"
+          target="_blank"
+          class="flex items-center space-x-2 border border-gray-600 px-4 py-2 rounded-md text-gray-200 hover:border-primary hover:text-primary transition-colors duration-300"
+          aria-label="GitLab"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-gitlab"></i><span>GitLab</span>
+        </a>
+       <a
+        href="https://tryhackme.com/p/EthanUltra/"
+        target="_blank"
+        class="flex items-center space-x-2 border border-gray-600 px-4 py-2 rounded-md text-gray-200 hover:border-primary hover:text-primary transition-colors duration-300"
+        aria-label="TryHackMe"
+        rel="noopener noreferrer"
+      >
+        <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe" class="w-5 h-5" />
+        <span>TryHackMe</span>
+      </a>
+      </div>
+    </header>
+
+    <!-- About section -->
+    <section
+      id="about"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="about-heading"
+    >
+      <div class="max-w-5xl mx-auto">
+        <h2
+          id="about-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-8 text-center"
+        >
+          About Me
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+  <!-- About text -->
+  <div class="space-y-5 text-base md:text-lg leading-relaxed">
+  <p>
+    I’m currently studying to become an <em>Application Developer</em> and have
+    spent the last four years learning by building. What started as curiosity
+    about technology has grown into hands-on experience through self-directed
+    projects and coursework, with a strong interest in building applications
+    that are secure, reliable, and well-designed.
+  </p>
+
+  <ul class="list-disc pl-5 space-y-2">
+    <li><strong>Application Developer</strong> with hands-on project experience</li>
+    <li><strong>Strong interest in cybersecurity</strong> and secure coding practices</li>
+    <li><strong>Comfortable with full-stack development</strong> and problem-solving</li>
+    <li><strong>Fast learner</strong> who thrives on learning by doing</li>
+  </ul>
+
+  <p>
+    I enjoy working with languages like Java, Python, and JavaScript, and
+    frameworks such as React and Node.js. From building full-stack prototypes
+    to automating workflows with Docker and exploring networking tools like
+    Wireshark and Burp Suite, I focus on writing maintainable code and
+    understanding core concepts rather than just assembling features.
+  </p>
+
+  <p>
+    Beyond technical skills, I value collaboration, communication, and
+    creativity. I enjoy working in teams, taking initiative on small projects,
+    and sharing what I’ve learned. I’m especially motivated by opportunities
+    that allow me to grow as a developer while practising secure and accessible
+    software development from the start.
+  </p>
+</div>
+
+          <!-- Placeholder portrait with gradient border -->
+          <div class="flex justify-center">
+              <img src="./7951f0c9-6997-4fbc-83e5-29e7ab5530b5.png" 
+              width="75%" 
+              height="520" 
+              oncontextmenu="return false;" 
+              draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apprenticeship & Report Books section -->
+    <section
+      id="reports"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="reports-heading"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          id="reports-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-8 text-center"
+        >
+          Apprenticeship &amp; Report Books
+        </h2>
+        <p class="text-center text-gray-400 mb-8">
+          A glimpse into my learning journey during my apprenticeship
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-bg-darker p-6 rounded-xl shadow-lg backdrop-blur-lg border border-green-400/30 hover:border-green-400/60 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-semibold text-green-400 mb-2">
+              Academic Performance
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              My report books summarize my performance across key modules such as object-oriented programming, database design, networking, IT security and agile project management. Each module includes graded evaluations, practical assignments, and instructor feedback that reflect my progress and consistency in learning.
+            </p>
+          </div>
+          <div
+            class="bg-bg-darker p-6 rounded-xl shadow-lg backdrop-blur-lg border border-green-400/30 hover:border-green-400/60 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-semibold text-green-400 mb-2">
+              Practical Assignments
+            </h3>
+            <p class="text-gray-400 leading-relaxed">
+              Throughout my training I completed hands-on projects in areas like Java application development, web design, scripting and IT fundamentals. Every project is graded and fully documented, including planning, implementation steps, challenges, and improvements.
+            </p>
+          </div>
+        </div>
+        <p class="text-center text-gray-500 mt-8 max-w-4xl mx-auto">
+          These documents illustrate my dedication to lifelong learning and
+          provide a transparent record of my professional development. If you're
+          interested in reviewing my full report books or discussing my
+          apprenticeship experience in detail, please feel free to
+          <a href="#contact" class="text-primary underline">get in touch</a>.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-8">
+          <img src="./ReportBook.jpg" alt="Schulzeugnis" oncontextmenu="return false;" draggable="false" />
+          <img src="./ReportBook2.jpg" alt="Schulzeugnis" oncontextmenu="return false;" draggable="false" height="809" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Highlights section -->
+    <section
+      id="experience"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="experience-heading"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          id="experience-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500 mb-8 text-center"
+        >
+          Experience &amp; Highlights
+        </h2>
+        <p class="text-center text-gray-400 mb-12">
+          Key milestones that shaped my journey in software development and
+          cybersecurity
+        </p>
+        <div class="space-y-8">
+          <!-- Timeline item: Apprenticeship Begins -->
+          <div class="flex items-start">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white mr-6"
+            >
+              <i class="fas fa-code text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-indigo-300 mb-1">
+                2021 – Apprenticeship Begins
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Started my application development apprenticeship, working on
+                diverse projects from inventory management systems to dynamic
+                web apps. This hands-on experience sparked my passion for
+                crafting elegant, maintainable code.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline item: Cybersecurity Explorer -->
+          <div class="flex items-start">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-teal-500 flex items-center justify-center text-white mr-6"
+            >
+              <i class="fas fa-lock text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-green-300 mb-1">
+                2024 – Cybersecurity Explorer
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Dove into ethical hacking and cybersecurity by participating in
+                Capture The Flag competitions and solving retired machines on
+                Hack The Box. Developed scripts to automate tasks, documented
+                write-ups and shared knowledge with the community.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline item: Final Phase & Looking Ahead -->
+          <div class="flex items-start">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-red-500 flex items-center justify-center text-white mr-6"
+            >
+              <i class="fas fa-graduation-cap text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-pink-300 mb-1">
+                2025 – Final Phase &amp; Looking Ahead
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                I'm currently in the final phase of my Applikationsentwickler EFZ
+                training and may complete my diploma either this year or next,
+                depending on the placement. I'm actively looking for an
+                apprenticeship or an internship where I can apply my skills,
+                grow further and complete my qualification.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Skills section -->
+    <section
+      id="skills"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="skills-heading"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          id="skills-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-8 text-center"
+        >
+          Skills &amp; Expertise
+        </h2>
+        <p class="text-center text-gray-400 mb-12">
+          A snapshot of my technical and professional abilities
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Programming Languages -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-blue-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-code mr-2"></i> Programming Languages
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Python</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 75%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Java</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 65%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Ruby</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 50%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Go</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 45%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Web Technologies -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-purple-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-globe mr-2"></i> Web Technologies
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>HTML/CSS</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 85%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>React/Next.js</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 75%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>JavaScript/TypeScript</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Node.js/Express</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 55%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Vue.js</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 45%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Tools & Technologies -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-green-400/30 hover:border-green-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-green-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-toolbox mr-2"></i> Tools &amp; Technologies
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Docker/Kubernetes</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 60%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Cloud Services</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 55%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>MongoDB/PostgreSQL</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Git / CI‑CD</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>VS Code / IntelliJ</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 80%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Languages -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-pink-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-language mr-2"></i> Languages
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>English</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 80%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>German</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 75%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>French</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 55%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Soft Skills -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-yellow-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-people-group mr-2"></i> Soft Skills
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Teamwork &amp; Collaboration</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 80%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Problem Solving</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 85%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Communication</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 80%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Project Management</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Creativity</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 75%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- IT Skills -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-indigo-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-server mr-2"></i> IT Skills
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Network &amp; Server Administration</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 65%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Scripting &amp; Automation</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Database Management (SQL/NoSQL)</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Hardware &amp; Software</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 60%"></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Cybersecurity Tools & Practices -->
+          <div
+            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300 shadow-lg"
+          >
+            <h3
+              class="text-xl font-semibold text-teal-400 mb-4 flex items-center"
+            >
+              <i class="fas fa-shield-alt mr-2"></i> Cybersecurity Tools &amp;
+              Practices
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Wireshark &amp; Packet Analysis</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Burp Suite &amp; Web Testing</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 65%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Metasploit &amp; Exploitation</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 60%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Linux &amp; Kali Tools</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 75%"></span></div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span>Threat Modeling &amp; Secure Coding</span><span></span>
+                </div>
+                <div class="skill-bar"><span style="width: 70%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+    <section
+      id="projects"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="projects-heading"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          id="projects-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-12 text-center bg-black bg-opacity-50"
+        >
+          Featured Projects
+        </h2>
+        <!-- Search and filter controls -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-8">
+          <div class="relative">
+            <input
+              type="text"
+              id="projectSearch"
+              placeholder="Search projects..."
+              class="bg-bg-darker text-gray-300 rounded-full px-4 py-2 pr-10 border border-gray-600 focus:outline-none focus:border-blue-400"
+              aria-label="Search projects"
+            />
+            <i class="fas fa-search text-gray-400 absolute right-3 top-2.5"></i>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button
+              class="filter-btn active bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+              data-filter="html"
+            >
+              HTML/CSS
+            </button>
+            <button
+              class="filter-btn bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+              data-filter="js"
+            >
+              JavaScript
+            </button>
+            <button
+              class="filter-btn bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-medium"
+              data-filter="cyber"
+            >
+              Cybersecurity
+            </button>
+          </div>
+        </div>
+        <div
+          id="projectsGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Cybersecurity section -->
+    <section
+      id="cybersecurity"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="cyber-heading"
+    >
+      <div class="max-w-5xl mx-auto">
+        <h2
+          id="cyber-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 mb-8 text-center"
+        >
+          Cybersecurity
+        </h2>
+        <p class="text-center text-gray-400 mb-8">
+          Exploring the world of ethical hacking and security challenges as a
+          learner
+        </p>
+        <div class="prose prose-invert max-w-none mx-auto text-gray-300">
+          <p class="text-lg leading-relaxed">
+            I’m exploring cybersecurity through capture‑the‑flag competitions
+            and practice labs. I’m learning to use tools like Wireshark,
+            Burp&nbsp;Suite, Metasploit and nmap in Kali&nbsp;Linux and Docker
+            environments to understand both attack and defence perspectives. I
+            write scripts in Python and Bash to automate tasks, build
+            proof‑of‑concept exploits and solve challenges. These experiences
+            are helping me build a foundation in data protection and secure
+            coding, and I’m continually learning about emerging threats.
+          </p>
+          <ul class="list-disc pl-5 mt-4 text-gray-400">
+            <li>
+              Participated in platforms like Hack&nbsp;The&nbsp;Box and other
+              CTF events to practise my skills by completing labs and retired
+              machines.
+            </li>
+            <li>
+              Published detailed CTF write‑ups and security blog posts to share
+              knowledge with the community.
+            </li>
+            <li>
+              Taking courses in Kali&nbsp;Linux, penetration testing and secure
+              coding best practices to build solid foundations.
+            </li>
+          </ul>
+          <p class="text-lg text-gray-400 mt-6">
+            Below you’ll find a selection of my cybersecurity projects and
+            write‑ups. These include walkthroughs of hackathon challenges, CTF
+            solutions and security simulations where I dive into vulnerabilities
+            and demonstrate mitigation techniques. My goal is to combine strong
+            development skills with deep security expertise to build robust and
+            secure applications.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center my-8">
+      <div class="rounded-xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+        <iframe 
+          src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5902622" 
+          style="border:none; width: 350px; height: 200px;">
+        </iframe>
+      </div>
+    </div>
+    </section>
+
+    <!-- Certifications section -->
+    <section
+      id="certifications"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="certs-heading"
+    >
+      <div class="max-w-5xl mx-auto">
+        <h2
+          id="certs-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 mb-8 text-center"
+        >
+          Certifications
+        </h2>
+        <p class="text-center text-gray-400 mb-8">
+          Validating my skills and knowledge through recognized certifications
+        </p>
+        <!-- Cybersecurity tools and practices grid -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fas fa-network-wired text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">Network Analysis</h4>
+              <p class="text-gray-400 text-sm">
+                Deep packet inspection and traffic analysis using Wireshark and
+                tcpdump.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fas fa-bug text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">Web Testing</h4>
+              <p class="text-gray-400 text-sm">
+                Identifying and exploiting web vulnerabilities with
+                Burp&nbsp;Suite and OWASP tools.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fas fa-crosshairs text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">
+                Exploitation Frameworks
+              </h4>
+              <p class="text-gray-400 text-sm">
+                Developing and executing exploits with Metasploit and custom
+                scripts.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fab fa-linux text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">Linux &amp; Kali</h4>
+              <p class="text-gray-400 text-sm">
+                Leveraging Kali&nbsp;Linux distributions and command‑line tools
+                for penetration testing.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fas fa-shield-alt text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">Threat Modeling</h4>
+              <p class="text-gray-400 text-sm">
+                Designing secure architectures and performing threat modeling to
+                mitigate risks.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start space-x-4 p-4 bg-bg-darker rounded-lg border border-teal-400/30 hover:border-teal-400/60 transition-all duration-300"
+          >
+            <i class="fas fa-terminal text-teal-300 text-3xl"></i>
+            <div>
+              <h4 class="text-teal-300 font-semibold mb-1">
+                Scripting &amp; Automation
+              </h4>
+              <p class="text-gray-400 text-sm">
+                Automating reconnaissance and exploitation tasks using Python
+                and Bash.
+              </p>
+            </div>
+          </div>
+        </div>
+        <ul class="space-y-6 text-gray-300 text-lg mt-6">
+           <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <strong class="text-white">Google Cybersecurity Professional Certificate – Google / Coursera (2025)</strong> – 
+              Completed the Google Cybersecurity Professional Certificate, a hands-on program covering risk management, network security, Linux, SQL, Python automation, SIEM tools, and incident detection and response.
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <strong class="text-white">Security Analyst Level 1 (SAL1)</strong> – Completed the TryHackMe Security Analyst Level 1 learning path, covering foundational blue-team concepts including threat detection, incident response, log analysis, and security operations fundamentals.
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <strong class="text-white"
+                >Cambridge English First Certificate (B2)</strong
+              >
+              – Earned the Cambridge English Level B2 certification in 2023,
+              demonstrating upper‑intermediate proficiency in English.
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <strong class="text-white">ECDL Certification</strong> – Obtained
+              the International Certification of Digital Literacy, including certified modules
+              in Word Processing and Presentation (PowerPoint), validating
+              essential IT skills.
+            </div>
+          </li>
+        </ul>
+        <!-- Certificate gallery to preview credentials -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+          <!-- Google Cybersecurity certificate -->
+          <a href="./GOOGLECYBERSECURITY_CERTIFICATE_LANDING_PAGE~DU8S7DZO9MBB.jpeg" target="_blank">
+            <img
+              src="./GOOGLECYBERSECURITY_CERTIFICATE_LANDING_PAGE~DU8S7DZO9MBB.jpeg"
+              alt="Google Cybersecurity certificate"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+          <!-- TryHackMe Pre Security certificate -->
+          <a href="./THMSAL1.png" target="_blank">
+            <img
+              src="./THMSAL1.png"
+              alt="TryHackMe Pre Security Learning Path"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+          <!-- Cambridge English certificate -->
+          <a href="./B2FIRST_1.png" target="_blank">
+            <img
+              src="./B2FIRST_1.png"
+              alt="Cambridge English B2 certificate"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+          <!-- ECDL certificate -->
+          <a href="./ECDL.png" target="_blank">
+            <img
+              src="./ECDL.png"
+              alt="ECDL Word Processing and Presentation certificate"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog section 
+    <section
+      id="blog"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="blog-heading"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          id="blog-heading"
+          class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-12 text-center"
+        >
+          Blogs
+        </h2>
+        <-- Sample blog post 
+        <div
+          class="bg-bg-darker bg-opacity-70 p-10 rounded-xl backdrop-blur-lg border border-blue-400/50 hover:border-blue-400 transition-all duration-300 shadow-lg max-w-3xl mx-auto"
+        >
+          <img
+            src="./c037f5b4-170b-4087-b593-0a9c3d027776.png"
+            alt="Illustration representing coding and cybersecurity"
+            class="w-full h-60 object-cover rounded-lg mb-6"
+            loading="lazy"
+            oncontextmenu="return false;" 
+            draggable="false"
+          />
+          <h3 class="text-3xl font-semibold text-white mb-2">
+            My Journey into Coding &amp; Cybersecurity
+          </h3>
+          <p class="text-gray-500 text-sm mb-4">Published on April 5, 2025</p>
+          <p class="text-gray-400 mb-6">
+            In this first post I reflect on how curiosity sparked my love for
+            programming and ethical hacking. I share early projects from my
+            apprenticeship, lessons learned from securing web applications and
+            tips for anyone starting out in tech. Future posts will dive deeper
+            into algorithms, security tools and personal insights from
+            capture‑the‑flag competitions.
+          </p>
+          <p class="italic text-gray-500 mt-2">More posts coming soon…</p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-300"
+              >Explore My Projects</a
+            >
+            <a
+              href="#contact"
+              class="px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-400 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+
+    <!-- Contact section -->
+    <section
+      id="contact"
+      class="py-24 px-6 bg-black bg-opacity-50"
+      role="region"
+      aria-labelledby="contact-heading"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          id="contact-heading"
+          class="text-4xl font-bold text-center mb-8 text-gray-100"
+        >
+          Let’s Connect
+        </h2>
+        <p class="text-center text-gray-400 mb-6">
+          I'm currently open to apprenticeship and internship opportunities in
+          application development and cybersecurity. If my skills and
+          experiences resonate with your team, please drop me a message – I'd
+          love to chat!
+        </p>
+        <div id="successMessage" class="hidden text-center text-green-500 mb-4">
+          Thank you for reaching out! I’ll get back to you shortly.
+        </div>
+        <div id="errorMessage" class="hidden text-center text-red-500 mb-4">
+          Failed to send message. Please try again.
+        </div>
+        <form
+          id="contactForm"
+          class="max-w-xl mx-auto"
+          action="https://formspree.io/f/xnqkwwlv"
+          method="POST"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-300 mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-2 rounded-md bg-bg-darker text-gray-100 border border-gray-600 focus:outline-none"
+              required
+              placeholder="Your name"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-300 mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 rounded-md bg-bg-darker text-gray-100 border border-gray-600 focus:outline-none"
+              required
+              placeholder="your.email@example.com"
+            />
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-gray-300 mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-2 rounded-md bg-bg-darker text-gray-100 border border-gray-600 focus:outline-none"
+              required
+              placeholder="Your message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition-colors duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bg-darker py-12">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex justify-center space-x-6 mb-6">
+          <a
+            href="https://www.linkedin.com/in/ethan-shrestha-6115631b9/"
+            class="text-gray-400 hover:text-blue-400 transition-colors"
+            aria-label="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a
+            href="https://github.com/EthanUltra"
+            class="text-gray-400 hover:text-blue-400 transition-colors"
+            aria-label="GitHub"
+            target="_blank"
+          >
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a
+            href="https://gitlab.com/EthanShrestha"
+            class="text-gray-400 hover:text-blue-400 transition-colors"
+            aria-label="GitLab"
+            target="_blank"
+          >
+            <i class="fab fa-gitlab fa-2x"></i>
+          </a>
+          <a
+            href="https://discord.com/users/383217890028945418"
+            class="text-gray-400 hover:text-blue-400 transition-colors"
+            aria-label="Discord"
+            target="_blank"
+          >
+            <i class="fab fa-discord fa-2x"></i>
+          </a>
+          <a
+            href="https://tryhackme.com/p/EthanUltra/"
+            class="text-gray-400 hover:text-red-400 transition-colors"
+            aria-label="TryHackMe"
+            target="_blank"
+          >
+            <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe logo" class="w-8 h-8" oncontextmenu="return false;" draggable="false" />
+          </a>
+
+          <a
+            href="https://www.freecodecamp.org/EthanUltra"
+            class="text-gray-400 hover:text-blue-400 transition-colors"
+            aria-label="freeCodeCamp"
+            target="_blank"
+          >
+            <i class="fab fa-free-code-camp fa-2x"></i>
+          </a>
+        </div>
+        <p class="text-center text-gray-500">
+          © 2025 Ethan Shrestha. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button
+      id="scrollToTop"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-700 focus:outline-none"
+      aria-label="Scroll to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Hidden Google Translate container (used by script) -->
+    <div id="google_translate_element"></div>
+
+    <!-- Scripts for animations and interactivity -->
+    <script>
+      // Create floating dots for subtle hero animation
+      function createDots() {
+        const container = document.getElementById('dotsContainer')
+        const dotsCount = 50
+        for (let i = 0; i < dotsCount; i++) {
+          const dot = document.createElement('div')
+          dot.className = 'dot'
+          const size = Math.random() * 4 + 2
+          dot.style.width = `${size}px`
+          dot.style.height = `${size}px`
+          dot.style.left = `${Math.random() * 100}%`
+          dot.style.top = `${Math.random() * 100}%`
+          dot.style.animation = `float ${
+            Math.random() * 3 + 2
+          }s infinite ease-in-out alternate, fadeInOut ${
+            Math.random() * 2 + 2
+          }s infinite ease-in-out alternate`
+          container.appendChild(dot)
+        }
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        createDots()
+      })
+      // Matrix rain effect
+      const matrixCanvas = document.getElementById('matrixCanvas')
+      const mctx = matrixCanvas.getContext('2d')
+      function resizeMatrix() {
+        matrixCanvas.width = window.innerWidth
+        matrixCanvas.height = window.innerHeight
+      }
+      resizeMatrix()
+      window.addEventListener('resize', resizeMatrix)
+      const fontSize = 14
+      let columns = Math.floor(matrixCanvas.width / fontSize)
+      let drops = new Array(columns).fill(1)
+      const chars = 'ABCDEFGHIKLMNOPQRSTUVWXYZ1234567890'
+      function drawMatrix() {
+        mctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+        mctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height)
+        mctx.fillStyle = '#0F0'
+        mctx.font = fontSize + 'px monospace'
+        for (let i = 0; i < drops.length; i++) {
+          const text = chars[Math.floor(Math.random() * chars.length)]
+          const x = i * fontSize
+          const y = drops[i] * fontSize
+          mctx.fillText(text, x, y)
+          if (y > matrixCanvas.height && Math.random() > 0.9) {
+            drops[i] = 0
+          }
+          drops[i]++
+        }
+        requestAnimationFrame(drawMatrix)
+      }
+      requestAnimationFrame(drawMatrix)
+      // Particle system effect
+      const particleCanvasEl = document.getElementById('particleCanvas')
+      const pctx = particleCanvasEl.getContext('2d')
+      let particles = []
+      // Additional array to hold mouse trail particles
+      let mouseTrail = []
+      function resizeParticles() {
+        particleCanvasEl.width = window.innerWidth
+        particleCanvasEl.height = window.innerHeight
+        initParticles()
+      }
+      function initParticles() {
+        particles = []
+        const count = Math.floor(
+          (particleCanvasEl.width * particleCanvasEl.height) / 15000
+        )
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * particleCanvasEl.width,
+            y: Math.random() * particleCanvasEl.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            size: Math.random() * 2 + 1,
+          })
+        }
+      }
+      function updateParticles() {
+        particles.forEach((p) => {
+          p.x += p.vx
+          p.y += p.vy
+          if (p.x < 0 || p.x > particleCanvasEl.width) p.vx *= -1
+          if (p.y < 0 || p.y > particleCanvasEl.height) p.vy *= -1
+        })
+      }
+      function drawParticles() {
+        pctx.clearRect(0, 0, particleCanvasEl.width, particleCanvasEl.height)
+        pctx.fillStyle = '#ffffff'
+        particles.forEach((p) => {
+          pctx.beginPath()
+          pctx.arc(p.x, p.y, p.size, 0, 2 * Math.PI)
+          pctx.fill()
+        })
+      }
+      function animateParticles() {
+        requestAnimationFrame(animateParticles)
+        updateParticles()
+        drawParticles()
+        drawMouseTrail()
+      }
+      /* Listen for mouse movement to add trail particles
+      window.addEventListener('mousemove', (e) => {
+        const rect = particleCanvasEl.getBoundingClientRect()
+        mouseTrail.push({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
+          alpha: 1,
+          radius: 3,
+        })
+      })
+      */
+      // Draw fading circles that follow the cursor
+      function drawMouseTrail() {
+        mouseTrail.forEach((p, i) => {
+          pctx.fillStyle = `rgba(0, 255, 221, ${p.alpha})`
+          pctx.beginPath()
+          pctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI)
+          pctx.fill()
+          p.alpha -= 0.02
+          p.radius += 0.05
+          if (p.alpha <= 0) {
+            mouseTrail.splice(i, 1)
+          }
+        })
+      }
+      resizeParticles()
+      window.addEventListener('resize', resizeParticles)
+      animateParticles()
+      // Scroll progress bar and back-to-top button
+      const progressEl = document.getElementById('scrollProgress')
+      const scrollToTopBtn = document.getElementById('scrollToTop')
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight
+        const scrolled = (scrollTop / docHeight) * 100
+        progressEl.style.width = `${scrolled}%`
+        if (scrollTop > 300) {
+          scrollToTopBtn.style.opacity = '1'
+        } else {
+          scrollToTopBtn.style.opacity = '0'
+        }
+      })
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
+      // Mobile menu toggle
+      document
+        .getElementById('mobileMenuToggle')
+        .addEventListener('click', () => {
+          const menu = document.getElementById('mobileMenu')
+          menu.classList.toggle('hidden')
+        })
+      // Language dropdown toggles
+      document
+        .getElementById('langToggleDesktop')
+        .addEventListener('click', () => {
+          document.getElementById('langMenuDesktop').classList.toggle('hidden')
+        })
+      document
+        .getElementById('langToggleMobile')
+        .addEventListener('click', () => {
+          document.getElementById('langMenuMobile').classList.toggle('hidden')
+        })
+      // Theme toggles
+      function toggleTheme(btn) {
+        const html = document.documentElement;
+        html.classList.toggle('light-mode');
+        const isLight = html.classList.contains('light-mode');
+        btn.textContent = isLight ? 'Dark Mode' : 'Light Mode';
+      }
+      document
+        .getElementById('toggleThemeDesktop')
+        .addEventListener('click', function () {
+          toggleTheme(this)
+        })
+      document
+        .getElementById('toggleThemeMobile')
+        .addEventListener('click', function () {
+          toggleTheme(this)
+        })
+      // Effects toggles
+      function toggleEffects() {
+        const isHidden = matrixCanvas.style.display === 'none'
+        matrixCanvas.style.display = isHidden ? 'block' : 'none'
+        particleCanvasEl.style.display = isHidden ? 'block' : 'none'
+        document.getElementById('dotsContainer').style.display = isHidden
+          ? 'block'
+          : 'none'
+        const btns = [
+          document.getElementById('toggleEffectsDesktop'),
+          document.getElementById('toggleEffectsMobile'),
+        ]
+        btns.forEach((btn) => {
+          if (btn) {
+            btn.textContent = isHidden ? 'Turn Off Effects' : 'Turn On Effects'
+          }
+        })
+      }
+      document
+        .getElementById('toggleEffectsDesktop')
+        .addEventListener('click', toggleEffects)
+      document
+        .getElementById('toggleEffectsMobile')
+        .addEventListener('click', toggleEffects)
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          if (effectsEnabled) stopEffects()
+        }
+      })
+      // Projects data
+      const projects = [
+        {
+          title: 'Quiz Application',
+          description:
+            'A quiz app featuring 10 randomly selected questions with a 60‑second time limit.',
+          // Updated to a custom illustration highlighting quizzes and timers
+          image: './dd791850-6dcb-41c1-8be5-6685d859daf2.png',
+          link: 'https://quizapplication.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/QuizApplication',
+          categories: ['html', 'js', 'python', 'java'],
+          tech: ['HTML', 'CSS', 'JavaScript', 'Python', 'Docker', 'AWS'],
+        },
+        {
+          title: 'Kanban Board Web App',
+          description:
+            'A collaborative Kanban board that lets you create projects, add tasks and manage workflow in real‑time.',
+          // Abstract Kanban illustration
+          image: './fcb6bbc2-ee4f-4066-8b5b-1e89f1f942ba.png',
+          link: 'http://kanban.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/KanbanBoard',
+          categories: ['html', 'js'],
+          tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+        },
+        {
+          title: 'Maze Game',
+          description:
+            'A fun maze game built with Java that generates random mazes with increasing difficulty.',
+          // Neon maze pattern
+          image: './75894aa4-7fb5-4ef9-a07d-e63831abfeb0.png',
+          link: 'http://mazegame.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/MazeGame',
+          categories: ['java'],
+          tech: ['Java', 'JavaFX'],
+        },
+        {
+          title: 'Speed Type Test',
+          description:
+            'Measure your typing speed with random sentences and track your performance over time.',
+          // Futuristic typing illustration
+          image: './5def5eae-1591-4b1d-8a33-32cb4bfe9f23.png',
+          link: 'http://speedtype.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/SpeedTypeTest',
+          categories: ['html', 'js'],
+          tech: ['JavaScript', 'HTML', 'CSS'],
+        },
+        {
+          title: 'Chess with AI',
+          description:
+            'Play chess against an AI opponent with adjustable difficulty levels and an interactive scoreboard.',
+          // Chess and AI concept art
+          image: './8e0106c5-280b-4c5d-af7d-865fcd0ab522.png',
+          link: 'http://chess.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/ChessWithAI',
+          categories: ['java'],
+          tech: ['Java', 'Minimax'],
+        },
+        {
+          title: 'Table of Elements',
+          description:
+            'An interactive periodic table that allows you to search and filter elements with detailed information.',
+          // Colourful periodic table illustration
+          image: './6f78b590-093b-4cb2-8e5f-dd803ed9e323.png',
+          link: 'http://tableofelements.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/InteractivePeriodicTable',
+          categories: ['html', 'js'],
+          tech: ['HTML', 'CSS', 'JavaScript'],
+        },
+        {
+          title: 'Cybersecurity Write‑Ups',
+          description:
+            'A collection of walkthroughs and articles documenting solutions to CTF challenges and penetration tests.',
+          // Coding & cybersecurity illustration
+          image: './c037f5b4-170b-4087-b593-0a9c3d027776.png',
+          link: '#cybersecurity',
+          github: 'https://github.com/EthanUltra/htb-presence-main',
+          categories: ['cyber', 'python', 'js'],
+          tech: ['Python', 'Bash', 'Wireshark', 'Burp Suite'],
+        },
+      ]
+      // Create project card elements
+      function createProjectCard(project) {
+        const card = document.createElement('div')
+        card.className =
+          'project-card bg-bg-darker rounded-xl overflow-hidden shadow-lg transition-transform transform hover:-translate-y-2'
+        card.setAttribute('data-categories', project.categories.join(' '))
+        card.innerHTML = `
+          <div class="relative">
+            <img src="${project.image}" alt="${
+          project.title
+        }" class="w-full h-48 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div class="space-x-2">
+                <a href="${
+                  project.link
+                }" target="_blank" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Live Demo</a>
+                ${
+                  project.github
+                    ? `<a href="${project.github}" target="_blank" class="px-3 py-1 bg-gray-600 text-white rounded-md text-sm hover:bg-gray-700">Source Code</a>`
+                    : ''
+                }
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+            <p class="text-gray-400 text-sm mb-3">${project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              ${project.tech
+                .map(
+                  (t) =>
+                    `<span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">${t}</span>`
+                )
+                .join('')}
+            </div>
+          </div>
+        `
+        return card
+      }
+      // Initialize projects
+      function loadProjects() {
+        const grid = document.getElementById('projectsGrid')
+        projects.forEach((project) => {
+          const card = createProjectCard(project)
+          grid.appendChild(card)
+        })
+      }
+      // Filtering and searching
+      function filterProjects() {
+        const activeBtn = document.querySelector('.filter-btn.active')
+        const filter = activeBtn ? activeBtn.getAttribute('data-filter') : 'all'
+        const searchValue = document
+          .getElementById('projectSearch')
+          .value.toLowerCase()
+        document.querySelectorAll('.project-card').forEach((card) => {
+          const categories = card.getAttribute('data-categories')
+          const title = card.querySelector('h3').textContent.toLowerCase()
+          const description = card.querySelector('p').textContent.toLowerCase()
+          const matchesFilter = filter === 'all' || categories.includes(filter)
+          const matchesSearch =
+            title.includes(searchValue) || description.includes(searchValue)
+          if (matchesFilter && matchesSearch) {
+            card.classList.remove('hidden')
+          } else {
+            card.classList.add('hidden')
+          }
+        })
+      }
+      function initProjectControls() {
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          btn.addEventListener('click', function () {
+            document
+              .querySelectorAll('.filter-btn')
+              .forEach((b) => b.classList.remove('active', 'bg-blue-600'))
+            this.classList.add('active', 'bg-blue-600')
+            filterProjects()
+          })
+        })
+        document
+          .getElementById('projectSearch')
+          .addEventListener('input', () => {
+            filterProjects()
+          })
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        loadProjects()
+        initProjectControls()
+      })
+      // Contact form submission
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (e) {
+          e.preventDefault()
+          const form = e.target
+          const formData = new FormData(form)
+          fetch(form.action, {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                form.reset()
+                document
+                  .getElementById('successMessage')
+                  .classList.remove('hidden')
+                document.getElementById('errorMessage').classList.add('hidden')
+              } else {
+                throw new Error('Network response was not ok')
+              }
+            })
+            .catch(() => {
+              document.getElementById('successMessage').classList.add('hidden')
+              document.getElementById('errorMessage').classList.remove('hidden')
+            })
+        })
+
+      // Typed effect for hero tagline
+      const typedPhrases = [
+        'Aspiring Application Developer',
+        'Cybersecurity Explorer',
+        'Collaborative Learner',
+        'Problem Solver',
+      ]
+      let typedIndex = 0
+      let charIndex = 0
+      let isDeleting = false
+      const typedEl = document.getElementById('typedText')
+
+      function type() {
+        const currentPhrase = typedPhrases[typedIndex]
+        // Determine substring length based on deleting or typing state
+        if (isDeleting) {
+          charIndex--
+        } else {
+          charIndex++
+        }
+        // Update the text content
+        typedEl.textContent = currentPhrase.substring(0, charIndex)
+        let delay = isDeleting ? 50 : 100
+        // Pause when a phrase is fully typed
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          delay = 2000
+          isDeleting = true
+        } else if (isDeleting && charIndex === 0) {
+          // Move to next phrase after deleting
+          isDeleting = false
+          typedIndex = (typedIndex + 1) % typedPhrases.length
+          delay = 500
+        }
+        setTimeout(type, delay)
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        type()
+      })
+
+      // Handle desktop language dropdown
+      document.querySelectorAll('#langMenuDesktop button').forEach(button => {
+        button.addEventListener('click', () => {
+          document.getElementById('langMenuDesktop').classList.add('hidden');
+        });
+      });
+
+      // Handle mobile language dropdown
+      document.querySelectorAll('#langMenuMobile button').forEach(button => {
+        button.addEventListener('click', () => {
+          document.getElementById('langMenuMobile').classList.add('hidden');
+        });
+      });
+
+      document.addEventListener("contextmenu", e => e.preventDefault());
+    </script>
+  </body>
+</html>
