@@ -25,3 +25,5 @@
               what I’ve learned. I’m excited about pushing boundaries in
               software development while practising secure coding and
               accessibility from the start.
+
+              
