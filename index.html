@@ -17,8 +17,7 @@
     <link rel="canonical" href="https://ethanshrestha.ch" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>
-      Ethan Shrestha – Aspiring Application Developer &amp; Cybersecurity
-      Enthusiast
+      Ethan Shrestha – Application Developer | Full-Stack &amp; Cloud
     </title>
 
     <!-- Tailwind CSS for rapid, responsive styling -->
@@ -128,6 +127,21 @@
         height: 0 !important;
       }
 
+      .skill-tag {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 6px 14px;
+        border-radius: 9999px;
+        font-size: 0.85rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: inline-block;
+        transition: 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
       body {
         top: 0px !important;
       }
@@ -181,6 +195,15 @@
         );
         border-radius: 9999px;
       }
+
+      .effects-layer {
+        transition: opacity 0.4s ease;
+      }
+      .effects-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
       /* Floating dots used on hero for subtle animation */
       .dot {
         position: absolute;
@@ -255,12 +278,12 @@
     <!-- Background canvas effects -->
     <canvas
       id="matrixCanvas"
-      class="fixed inset-0 w-full h-full z-0 opacity-10"
+      class="fixed inset-0 w-full h-full z-0 opacity-10 effects-layer"
       aria-hidden="true"
     ></canvas>
     <canvas
       id="particleCanvas"
-      class="fixed inset-0 w-full h-full z-0"
+      class="fixed inset-0 w-full h-full z-0 effects-layer"
       aria-hidden="true"
     ></canvas>
 
@@ -557,20 +580,20 @@
       id="home"
       class="min-h-screen flex flex-col justify-center items-center text-center relative px-4 overflow-hidden"
     >
-      <!-- Floating dots container -->
-      <div
-        id="dotsContainer"
-        class="absolute inset-0 pointer-events-none"
-      >
-      <!-- Decorative cyber background image for hero -->
-      <img
-        src="./78a93361-afaf-427d-902d-81973f2c525f.png"
-        alt="Abstract cyber network background"
-        class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-
-        events-none"
-        oncontextmenu="return false;" 
-        draggable="false"
-      />
+       <!-- Background image (ALWAYS visible) -->
+    <img
+      src="./78a93361-afaf-427d-902d-81973f2c525f.png"
+      alt="Abstract cyber network background"
+      class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none -z-10"
+      oncontextmenu="return false;"
+      draggable="false"
+    />
+
+    <!-- Floating dots container (effects only) -->
+    <div
+      id="dotsContainer"
+      class="absolute inset-0 pointer-events-none z-0"
+    ></div>
       </div>
       <h1
         class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-4 relative z-10"
@@ -587,8 +610,7 @@
       <p
         class="text-base sm:text-lg md:text-xl text-gray-400 mb-8 relative z-10 max-w-2xl"
       >
-        Looking for an apprenticeship or internship where I can apply and expand
-        what I’ve learned in application development and cybersecurity.
+        Seeking an IT internship to contribute to real-world software, infrastructure, or security systems.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a
@@ -667,34 +689,28 @@
   <!-- About text -->
   <div class="space-y-5 text-base md:text-lg leading-relaxed">
   <p>
-    I’m currently studying to become an <em>Application Developer</em> and have
-    spent the last four years learning by building. What started as curiosity
-    about technology has grown into hands-on experience through self-directed
-    projects and coursework, with a strong interest in building applications
-    that are secure, reliable, and well-designed.
-  </p>
-
-  <ul class="list-disc pl-5 space-y-2">
-    <li><strong>Application Developer</strong> with hands-on project experience</li>
-    <li><strong>Strong interest in cybersecurity</strong> and secure coding practices</li>
-    <li><strong>Comfortable with full-stack development</strong> and problem-solving</li>
-    <li><strong>Fast learner</strong> who thrives on learning by doing</li>
-  </ul>
-
-  <p>
-    I enjoy working with languages like Java, Python, and JavaScript, and
-    frameworks such as React and Node.js. From building full-stack prototypes
-    to automating workflows with Docker and exploring networking tools like
-    Wireshark and Burp Suite, I focus on writing maintainable code and
-    understanding core concepts rather than just assembling features.
+    Over the past four years of my education as an Application Developer,
+    I have built and deployed multiple full-stack projects, developing strong
+    foundations in backend logic, database integration, and containerized
+    deployment using Docker. What began as an interest in technology has evolved
+    into a disciplined focus on building secure, reliable, and well-structured
+    software systems.
   </p>
 
   <p>
-    Beyond technical skills, I value collaboration, communication, and
-    creativity. I enjoy working in teams, taking initiative on small projects,
-    and sharing what I’ve learned. I’m especially motivated by opportunities
-    that allow me to grow as a developer while practising secure and accessible
-    software development from the start.
+    I work primarily with Java, Python, and JavaScript, using frameworks such as
+    React and Node.js to develop structured applications. From building
+    prototypes to automating workflows with Docker and exploring networking tools
+    like Wireshark and Burp Suite, I focus on writing maintainable code and
+    understanding core system principles.
+  </p>
+
+  <p>
+    Alongside technical development, I contribute effectively in team settings,
+    communicate clearly, and take initiative when needed. I am looking for an IT
+    internship where I can apply my technical foundation in a professional
+    environment while continuing to grow across software development,
+    infrastructure, and security.
   </p>
 </div>
 
@@ -866,231 +882,60 @@
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Programming Languages -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-blue-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-code mr-2"></i> Programming Languages
+          <div class="p-6 rounded-xl bg-bg-darker border border-blue-400/30 shadow-lg">
+            <h3 class="text-xl font-semibold text-blue-400 mb-4">
+              <i class="fas fa-code mr-2"></i> Software Development
             </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Python</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Java</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 65%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Ruby</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 50%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Go</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 45%"></span></div>
-              </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">Java (OOP)</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript / TypeScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">SQL / NoSQL</span>
             </div>
           </div>
           <!-- Web Technologies -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-purple-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-globe mr-2"></i> Web Technologies
+          <div class="p-6 rounded-xl bg-bg-darker border border-green-400/30 shadow-lg">
+            <h3 class="text-xl font-semibold text-green-400 mb-4">
+              <i class="fas fa-cloud mr-2"></i> DevOps & Cloud
             </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>HTML/CSS</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 85%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>React/Next.js</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>JavaScript/TypeScript</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Node.js/Express</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 55%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Vue.js</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 45%"></span></div>
-              </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Kubernets (Fundamentals)</span>
+              <span class="skill-tag">Git & CI/CD</span>
+              <span class="skill-tag">AWS (Foundations)</span>
+              <span class="skill-tag">Automation Scripting</span>
             </div>
           </div>
           <!-- Tools & Technologies -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-green-400/30 hover:border-green-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-green-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-toolbox mr-2"></i> Tools &amp; Technologies
+          <div class="p-6 rounded-xl bg-bg-darker border border-indigo-400/30 shadow-lg">
+            <h3 class="text-xl font-semibold text-indigo-400 mb-4">
+              <i class="fas fa-server mr-2"></i> Infrastructure & Systems
             </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Docker/Kubernetes</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 60%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Cloud Services</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 55%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>MongoDB/PostgreSQL</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Git / CI‑CD</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>VS Code / IntelliJ</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 80%"></span></div>
-              </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Linux Fundamentals</span>
+              <span class="skill-tag">Network Basics</span>
+              <span class="skill-tag">Server Administration</span>
+              <span class="skill-tag">Database Management</span>
+              <span class="skill-tag">Hardware & Systems</span>
             </div>
           </div>
-          <!-- Languages -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-pink-400/30 hover:border-pink-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-pink-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-language mr-2"></i> Languages
+          <div class="p-6 rounded-xl bg-bg-darker border border-yellow-400/30 shadow-lg">
+            <h3 class="text-xl font-semibold text-yellow-400 mb-4">
+              <i class="fas fa-people-group mr-2"></i> Professional Skills
             </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>English</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 80%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>German</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>French</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 55%"></span></div>
-              </div>
-            </div>
-          </div>
-          <!-- Soft Skills -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-yellow-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-people-group mr-2"></i> Soft Skills
-            </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Teamwork &amp; Collaboration</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 80%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Problem Solving</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 85%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Communication</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 80%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Project Management</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Creativity</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-              </div>
-            </div>
-          </div>
-          <!-- IT Skills -->
-          <div
-            class="p-6 rounded-xl bg-bg-darker backdrop-blur-lg border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300 shadow-lg"
-          >
-            <h3
-              class="text-xl font-semibold text-indigo-400 mb-4 flex items-center"
-            >
-              <i class="fas fa-server mr-2"></i> IT Skills
-            </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Network &amp; Server Administration</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 65%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Scripting &amp; Automation</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Database Management (SQL/NoSQL)</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Hardware &amp; Software</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 60%"></span></div>
-              </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Problem Solving</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Project Organization</span>
+              <span class="skill-tag">English</span>
+              <span class="skill-tag">German</span>
+              <span class="skill-tag">French</span>
             </div>
           </div>
           <!-- Cybersecurity Tools & Practices -->
@@ -1103,37 +948,13 @@
               <i class="fas fa-shield-alt mr-2"></i> Cybersecurity Tools &amp;
               Practices
             </h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Wireshark &amp; Packet Analysis</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Burp Suite &amp; Web Testing</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 65%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Metasploit &amp; Exploitation</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 60%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Linux &amp; Kali Tools</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 75%"></span></div>
-              </div>
-              <div>
-                <div class="flex justify-between mb-1">
-                  <span>Threat Modeling &amp; Secure Coding</span><span></span>
-                </div>
-                <div class="skill-bar"><span style="width: 70%"></span></div>
-              </div>
+            <div class="flex flex-wrap gap-3">
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Linux Security Fundamentals</span>
+              <span class="skill-tag">Threat Modeling</span>
+              <span class="skill-tag">Security Lab Practicd</span>
+              <span class="skill-tag">Secure Coding</span>
             </div>
           </div>
         </div>
@@ -1200,6 +1021,35 @@
       </div>
     </section>
 
+    <section id="currently-working" class="py-20 px-6 bg-black bg-opacity-40">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
+          Currently Working On
+        </h2>
+
+        <p class="text-gray-400 mb-8">
+          Actively building real-world systems and strengthening security foundations.
+        </p>
+
+        <div class="space-y-4 text-gray-300 text-left max-w-2xl mx-auto">
+          <div>
+            <strong class="text-white text-lg">IT Ticketing System (In Progress)</strong><br />
+            Designing a role-based issue tracking system using Node.js, PostgreSQL, and Docker.
+          </div>
+
+          <div>
+            <strong class="text-white text-lg">Secure Authentication Patterns</strong><br />
+            Studying JWT-based authentication and secure session handling practices.
+          </div>
+
+          <div>
+            <strong class="text-white text-lg">Blue-Team Log Analysis Practice</strong><br />
+            Practicing incident detection techniques using structured lab environments.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Cybersecurity section -->
     <section
       id="cybersecurity"
@@ -1215,19 +1065,17 @@
           Cybersecurity
         </h2>
         <p class="text-center text-gray-400 mb-8">
-          Exploring the world of ethical hacking and security challenges as a
-          learner
+          Building practical cybersecurity foundations through hands-on labs and structured certification.
         </p>
         <div class="prose prose-invert max-w-none mx-auto text-gray-300">
           <p class="text-lg leading-relaxed">
-            I’m exploring cybersecurity through capture‑the‑flag competitions
-            and practice labs. I’m learning to use tools like Wireshark,
-            Burp&nbsp;Suite, Metasploit and nmap in Kali&nbsp;Linux and Docker
-            environments to understand both attack and defence perspectives. I
-            write scripts in Python and Bash to automate tasks, build
-            proof‑of‑concept exploits and solve challenges. These experiences
-            are helping me build a foundation in data protection and secure
-            coding, and I’m continually learning about emerging threats.
+            I develop practical cybersecurity foundations through structured lab
+            environments, capture-the-flag challenges, and formal certification.
+            I work with tools such as Wireshark, Burp Suite, Metasploit, and nmap
+            in Kali Linux and Docker environments to understand both offensive
+            and defensive perspectives. I also write Python and Bash scripts to
+            automate tasks and build proof-of-concept demonstrations, strengthening
+            my understanding of secure system design and vulnerability analysis.
           </p>
           <ul class="list-disc pl-5 mt-4 text-gray-400">
             <li>
@@ -1374,6 +1222,12 @@
               <strong class="text-white">Security Analyst Level 1 (SAL1)</strong> – Completed the TryHackMe Security Analyst Level 1 learning path, covering foundational blue-team concepts including threat detection, incident response, log analysis, and security operations fundamentals.
             </div>
           </li>
+           <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <strong class="text-white">TryHackMe Cyber Security 101 (SEC1)</strong> – Completed foundational cybersecurity certification covering networking basics, Linux security, web vulnerabilities, and attack-defense concepts in structured lab environments.
+            </div>
+          </li>
           <li class="flex items-start">
             <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
             <div>
@@ -1406,10 +1260,20 @@
               draggable="false"
             />
           </a>
-          <!-- TryHackMe Pre Security certificate -->
+          <!-- TryHackMe SAL1 certificate -->
           <a href="./THMSAL1.png" target="_blank">
             <img
               src="./THMSAL1.png"
+              alt="TryHackMe Pre Security Learning Path"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+          <!-- TryHackMe Cyber Security 101 certificate -->
+          <a href="./THMCYBERSECURITY101.png" target="_blank">
+            <img
+              src="./THMCYBERSECURITY101.png"
               alt="TryHackMe Pre Security Learning Path"
               class="w-full h-40 object-cover rounded shadow"
               oncontextmenu="return false;" 
@@ -1670,7 +1534,7 @@
       document.addEventListener('DOMContentLoaded', () => {
         createDots()
       })
-      // Matrix rain effect
+      /* Matrix rain effect
       const matrixCanvas = document.getElementById('matrixCanvas')
       const mctx = matrixCanvas.getContext('2d')
       function resizeMatrix() {
@@ -1701,6 +1565,7 @@
         requestAnimationFrame(drawMatrix)
       }
       requestAnimationFrame(drawMatrix)
+      */
       // Particle system effect
       const particleCanvasEl = document.getElementById('particleCanvas')
       const pctx = particleCanvasEl.getContext('2d')
@@ -1715,7 +1580,7 @@
       function initParticles() {
         particles = []
         const count = Math.floor(
-          (particleCanvasEl.width * particleCanvasEl.height) / 15000
+          (particleCanvasEl.width * particleCanvasEl.height) / 22000
         )
         for (let i = 0; i < count; i++) {
           particles.push({
@@ -1723,7 +1588,7 @@
             y: Math.random() * particleCanvasEl.height,
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
-            size: Math.random() * 2 + 1,
+            size: Math.random() * 1 + 1,
           })
         }
       }
@@ -1749,6 +1614,10 @@
         updateParticles()
         drawParticles()
         drawMouseTrail()
+        if (window.innerWidth < 768) {
+          effectsEnabled = false
+          toggleEffects()
+        }
       }
       /* Listen for mouse movement to add trail particles
       window.addEventListener('mousemove', (e) => {
@@ -1833,20 +1702,25 @@
         })
       // Effects toggles
       function toggleEffects() {
-        const isHidden = matrixCanvas.style.display === 'none'
-        matrixCanvas.style.display = isHidden ? 'block' : 'none'
-        particleCanvasEl.style.display = isHidden ? 'block' : 'none'
-        document.getElementById('dotsContainer').style.display = isHidden
-          ? 'block'
-          : 'none'
+        let effectsEnabled = true
+        effectsEnabled = !effectsEnabled
+        const layers = [
+          matrixCanvas,
+          particleCanvasEl,
+          document.getElementById('dotsContainer'),
+        ]
+
+        layers.forEach(el => el.classList.toggle('effects-hidden'))
+
+        const isOff = layers[0].classList.contains('effects-hidden')
+
         const btns = [
           document.getElementById('toggleEffectsDesktop'),
           document.getElementById('toggleEffectsMobile'),
         ]
-        btns.forEach((btn) => {
-          if (btn) {
-            btn.textContent = isHidden ? 'Turn Off Effects' : 'Turn On Effects'
-          }
+
+        btns.forEach(btn => {
+          if (btn) btn.textContent = isOff ? 'Turn On Effects' : 'Turn Off Effects'
         })
       }
       document
@@ -2060,10 +1934,10 @@
 
       // Typed effect for hero tagline
       const typedPhrases = [
-        'Aspiring Application Developer',
-        'Cybersecurity Explorer',
-        'Collaborative Learner',
-        'Problem Solver',
+        'Application Developer',
+        'Full-Stack System Builder',
+        'Cloud & Docker Practitioner',
+        'Security-Conscious Engineer'
       ]
       let typedIndex = 0
       let charIndex = 0
