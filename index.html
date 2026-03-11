@@ -254,6 +254,11 @@
       color: var(--text-light) !important;
       }
 
+      .light-mode .thm-icon,
+      .light-mode .thm-icon-2 {
+          filter: brightness(0);
+          transition: filter 0.3s ease;
+      } 
       img {
         -webkit-user-drag: none;
         -webkit-touch-callout: none;
@@ -632,7 +637,7 @@
           >Explore My Work</a
         >
         <a
-          href="https://drive.google.com/file/d/1o50etGiEbAVcLlOfDL7AvXm3vkLbFR1F/view?usp=sharing"
+          href="https://drive.google.com/file/d/1yUu5Ni1u1FSGRhn0UXOcTNzStM3E1ts5/view?usp=sharing"
           target="_blank"
           class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md font-semibold hover:shadow-lg transition-transform transform hover:scale-105"
           aria-label="Download resume"
@@ -676,7 +681,7 @@
         aria-label="TryHackMe"
         rel="noopener noreferrer"
       >
-        <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe" class="w-5 h-5" />
+        <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe" class="w-5 h-5 thm-icon" />
         <span>TryHackMe</span>
       </a>
       </div>
@@ -1230,6 +1235,13 @@
           <li class="flex items-start">
             <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
             <div>
+              <strong class="text-white">Penetration Testing Level 1 Certification</strong> – 
+              
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-award text-blue-400 mt-1 mr-3"></i>
+            <div>
               <strong class="text-white">Security Analyst Level 1 (SAL1)</strong> – Completed the TryHackMe Security Analyst Level 1 learning path, covering foundational blue-team concepts including threat detection, incident response, log analysis, and security operations fundamentals.
             </div>
           </li>
@@ -1266,6 +1278,16 @@
             <img
               src="./GOOGLECYBERSECURITY_CERTIFICATE_LANDING_PAGE~DU8S7DZO9MBB.jpeg"
               alt="Google Cybersecurity certificate"
+              class="w-full h-40 object-cover rounded shadow"
+              oncontextmenu="return false;" 
+              draggable="false"
+            />
+          </a>
+          <!-- TryHackMe SAL1 certificate -->
+          <a href="./THM-PENETRATION-TESTER-1.png" target="_blank">
+            <img
+              src="./THM-PENETRATION-TESTER-1.png"
+              alt="TryHackMe Pre Security Learning Path"
               class="w-full h-40 object-cover rounded shadow"
               oncontextmenu="return false;" 
               draggable="false"
@@ -1490,7 +1512,7 @@
             aria-label="TryHackMe"
             target="_blank"
           >
-            <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe logo" class="w-8 h-8" oncontextmenu="return false;" draggable="false" />
+            <img src="./Tryhackme--Streamline-Simple-Icons.svg" alt="TryHackMe logo" class="w-8 h-8 thm-icon-2" oncontextmenu="return false;" draggable="false" />
           </a>
 
           <a
