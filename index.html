@@ -1055,15 +1055,6 @@
 
         <div class="space-y-4 text-gray-300 text-left max-w-2xl mx-auto">
 
-          <div>
-            <strong class="text-white text-lg">Secure Authentication Patterns</strong><br />
-            Studying JWT-based authentication and secure session handling practices.
-          </div>
-
-          <div>
-            <strong class="text-white text-lg">Blue-Team Log Analysis Practice</strong><br />
-            Practicing incident detection techniques using structured lab environments.
-          </div>
         </div>
       </div>
     </section>
@@ -1864,8 +1855,46 @@
             'PostgreSQL',
             'Prisma',
             'Docker'
-          ],
+          ]
         },
+        {
+          title: 'Blue Team Log Analysis Lab',
+          description:
+            'A security-focused log analysis platform that simulates a blue team environment. The system analyzes authentication, web access, and process logs to detect threats such as brute-force attacks, suspicious commands, anomalies, and common web exploits using MITRE ATT&CK aligned detection rules.',
+          image: './screenshot-blue-team.png',
+          link: 'https://blue-team.ethanshrestha.ch',
+          github: 'https://github.com/EthanUltra/Blue-Team-Log-Analysis-Lab',
+          categories: ['security'],
+          tech: [
+            'React',
+            'Node.js',
+            'Express',
+            'Log Analysis',
+            'Cybersecurity',
+            'MITRE ATT&CK',
+            'Render'
+          ]
+        },
+        {
+          title: 'Secure Authentication Patterns',
+          description:
+            'A production-style authentication system demonstrating modern security practices including Argon2 password hashing, rotating JWT refresh tokens, HTTP-only cookies, rate limiting, and account lockout protection. Built as a secure reference implementation for web authentication flows.',
+          image: './screenshot-secure-auth.png',
+          link: 'https://auth.ethanshrestha.ch',
+          github: 'https://github.com/EthanUltra/secure-auth-web',
+          categories: ['security'],
+          tech: [
+            'React',
+            'Node.js',
+            'Express',
+            'PostgreSQL',
+            'Prisma',
+            'JWT',
+            'Argon2',
+            'Neon Database',
+            'Railway'
+          ]
+        }
       ]
       // Create project card elements
       function createProjectCard(project) {
