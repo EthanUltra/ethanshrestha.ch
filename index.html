@@ -1604,7 +1604,7 @@
       let drops = new Array(columns).fill(1)
       const chars = 'ABCDEFGHIKLMNOPQRSTUVWXYZ1234567890'
       function drawMatrix() {
-        mctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+        mctx.fillStyle = 'rgba(0, 0, 0, 0.25)'
         mctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height)
         mctx.fillStyle = '#0F0'
         mctx.font = fontSize + 'px monospace'
@@ -1794,72 +1794,6 @@
       // Projects data
       const projects = [
         {
-          title: 'Quiz Application',
-          description:
-            'A quiz app featuring 10 randomly selected questions with a 60‑second time limit.',
-          // Updated to a custom illustration highlighting quizzes and timers
-          image: './dd791850-6dcb-41c1-8be5-6685d859daf2.png',
-          link: 'https://quizapplication.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/QuizApplication',
-          categories: ['html', 'js', 'python', 'java'],
-          tech: ['HTML', 'CSS', 'JavaScript', 'Python', 'Docker', 'AWS'],
-        },
-        {
-          title: 'Kanban Board Web App',
-          description:
-            'A collaborative Kanban board that lets you create projects, add tasks and manage workflow in real‑time.',
-          // Abstract Kanban illustration
-          image: './fcb6bbc2-ee4f-4066-8b5b-1e89f1f942ba.png',
-          link: 'http://kanban.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/KanbanBoard',
-          categories: ['html', 'js'],
-          tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-        },
-        {
-          title: 'Maze Game',
-          description:
-            'A fun maze game built with Java that generates random mazes with increasing difficulty.',
-          // Neon maze pattern
-          image: './75894aa4-7fb5-4ef9-a07d-e63831abfeb0.png',
-          link: 'http://mazegame.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/MazeGame',
-          categories: ['java'],
-          tech: ['Java', 'JavaFX'],
-        },
-        {
-          title: 'Speed Type Test',
-          description:
-            'Measure your typing speed with random sentences and track your performance over time.',
-          // Futuristic typing illustration
-          image: './5def5eae-1591-4b1d-8a33-32cb4bfe9f23.png',
-          link: 'http://speedtype.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/SpeedTypeTest',
-          categories: ['html', 'js'],
-          tech: ['JavaScript', 'HTML', 'CSS'],
-        },
-        {
-          title: 'Chess with AI',
-          description:
-            'Play chess against an AI opponent with adjustable difficulty levels and an interactive scoreboard.',
-          // Chess and AI concept art
-          image: './8e0106c5-280b-4c5d-af7d-865fcd0ab522.png',
-          link: 'http://chess.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/ChessWithAI',
-          categories: ['java'],
-          tech: ['Java', 'Minimax'],
-        },
-        {
-          title: 'Table of Elements',
-          description:
-            'An interactive periodic table that allows you to search and filter elements with detailed information.',
-          // Colourful periodic table illustration
-          image: './6f78b590-093b-4cb2-8e5f-dd803ed9e323.png',
-          link: 'http://tableofelements.ethanshrestha.ch/',
-          github: 'https://github.com/EthanUltra/InteractivePeriodicTable',
-          categories: ['html', 'js'],
-          tech: ['HTML', 'CSS', 'JavaScript'],
-        },
-        {
           title: 'IT Help Desk Ticketing System',
           description:
             'A full-stack IT support ticketing system where users can submit issues and support agents manage, prioritize, and resolve them through a centralized dashboard.',
@@ -1978,7 +1912,73 @@
             'Render',
             'Tailwind CSS'
           ]
-        }
+        },
+                {
+          title: 'Quiz Application',
+          description:
+            'A quiz app featuring 10 randomly selected questions with a 60‑second time limit.',
+          // Updated to a custom illustration highlighting quizzes and timers
+          image: './dd791850-6dcb-41c1-8be5-6685d859daf2.png',
+          link: 'https://quizapplication.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/QuizApplication',
+          categories: ['html', 'js', 'python', 'java'],
+          tech: ['HTML', 'CSS', 'JavaScript', 'Python', 'Docker', 'AWS'],
+        },
+        {
+          title: 'Kanban Board Web App',
+          description:
+            'A collaborative Kanban board that lets you create projects, add tasks and manage workflow in real‑time.',
+          // Abstract Kanban illustration
+          image: './fcb6bbc2-ee4f-4066-8b5b-1e89f1f942ba.png',
+          link: 'http://kanban.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/KanbanBoard',
+          categories: ['html', 'js'],
+          tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+        },
+        {
+          title: 'Maze Game',
+          description:
+            'A fun maze game built with Java that generates random mazes with increasing difficulty.',
+          // Neon maze pattern
+          image: './75894aa4-7fb5-4ef9-a07d-e63831abfeb0.png',
+          link: 'http://mazegame.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/MazeGame',
+          categories: ['java'],
+          tech: ['Java', 'JavaFX'],
+        },
+        {
+          title: 'Speed Type Test',
+          description:
+            'Measure your typing speed with random sentences and track your performance over time.',
+          // Futuristic typing illustration
+          image: './5def5eae-1591-4b1d-8a33-32cb4bfe9f23.png',
+          link: 'http://speedtype.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/SpeedTypeTest',
+          categories: ['html', 'js'],
+          tech: ['JavaScript', 'HTML', 'CSS'],
+        },
+        {
+          title: 'Chess with AI',
+          description:
+            'Play chess against an AI opponent with adjustable difficulty levels and an interactive scoreboard.',
+          // Chess and AI concept art
+          image: './8e0106c5-280b-4c5d-af7d-865fcd0ab522.png',
+          link: 'http://chess.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/ChessWithAI',
+          categories: ['java'],
+          tech: ['Java', 'Minimax'],
+        },
+        {
+          title: 'Table of Elements',
+          description:
+            'An interactive periodic table that allows you to search and filter elements with detailed information.',
+          // Colourful periodic table illustration
+          image: './6f78b590-093b-4cb2-8e5f-dd803ed9e323.png',
+          link: 'http://tableofelements.ethanshrestha.ch/',
+          github: 'https://github.com/EthanUltra/InteractivePeriodicTable',
+          categories: ['html', 'js'],
+          tech: ['HTML', 'CSS', 'JavaScript'],
+        },
       ]
       // Create project card elements
       function createProjectCard(project) {
