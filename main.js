@@ -215,7 +215,7 @@ const projects = [
     title: 'IT Help Desk Ticketing System',
     description:
       'A full-stack IT support ticketing system where users can submit issues and support agents manage, prioritize, and resolve them through a centralized dashboard.',
-    image: '/api-ticket-system.ethanshrestha.ch_dashboard.png',
+    image: '/assets/projects/ticket-system.png',
     link: 'https://api-ticket-system.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/IT-Ticketing-System',
     categories: ['js'],
@@ -225,7 +225,7 @@ const projects = [
     title: 'Blue Team Log Analysis Lab',
     description:
       'A security-focused log analysis platform that simulates a blue team environment. The system analyzes authentication, web access, and process logs to detect threats such as brute-force attacks, suspicious commands, anomalies, and common web exploits using MITRE ATT&CK aligned detection rules.',
-    image: './screenshot-blue-team.png',
+    image: './assets/projects/blue-team.png',
     link: 'https://blue-team.ethanshrestha.ch',
     github: 'https://github.com/EthanUltra/Blue-Team-Log-Analysis-Lab',
     categories: ['cybersecurity'],
@@ -238,7 +238,7 @@ const projects = [
     title: 'Secure Authentication Patterns',
     description:
       'A production-style authentication system demonstrating modern security practices including Argon2 password hashing, rotating JWT refresh tokens, HTTP-only cookies, rate limiting, and account lockout protection. Built as a secure reference implementation for web authentication flows.',
-    image: './screenshot-secure-auth.png',
+    image: './assets/projects/secure-auth.png',
     link: 'https://auth.ethanshrestha.ch',
     github: 'https://github.com/EthanUltra/secure-auth-web',
     categories: ['react'],
@@ -251,7 +251,7 @@ const projects = [
     title: 'AI-Code Review',
     description:
       'An AI-powered code review tool that analyzes code for bugs, security vulnerabilities, performance issues, and style problems. Paste any code into the embedded Monaco editor (the same editor that powers VS Code), click review, and get structured feedback with a quality score, line-number references, and concrete fix suggestions — powered by Claude.',
-    image: './screenshot-codereview.png',
+    image: './assets/projects/code-review.png',
     link: 'https://codereview.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/codereview',
     categories: ['react'],
@@ -264,7 +264,7 @@ const projects = [
     title: 'WatchTower',
     description:
       'A SOC monitoring platform and mini SIEM dashboard for real-time log analysis, threat detection, and incident management. Stream security logs through WebSockets, detect threats using 13 MITRE ATT&CK-mapped rules, visualize active tactics with a MITRE heatmap, monitor severity breakdowns and threat scores, and create, track, and resolve security incidents — all backed by persistent SQLite storage.',
-    image: './screenshot-watchtower.png',
+    image: './assets/projects/watchtower.png',
     link: 'https://watchtower.ethanshrestha.ch',
     github: 'https://github.com/EthanUltra/WatchTower',
     categories: ['react', 'cybersecurity'],
@@ -277,7 +277,7 @@ const projects = [
     title: 'ChatSphere',
     description:
       'A real-time chat platform with WebSocket-powered messaging, public channels, private direct messages, online presence indicators, and typing indicators. Messages appear instantly across all connected clients, with persistent history stored in PostgreSQL and unread badges tracking new activity.',
-    image: './screenshot-chatsphere.png',
+    image: './assets/projects/chatsphere.png',
     link: 'https://chatsphere.ethanshrestha.ch',
     github: 'https://github.com/EthanUltra/chatsphere',
     categories: ['js', 'react'],
@@ -290,7 +290,7 @@ const projects = [
     title: 'PipelineWatch',
     description:
       'A full-stack task board built as a CI/CD showcase. Every pull request triggers an automated GitHub Actions pipeline that runs the Jest test suite and linting, and merges to main build a multi-stage Docker image, push it to Docker Hub, and deploy to Render with a post-deploy health check. Demonstrates a complete production workflow from commit to live deployment.',
-    image: './screenshot-pipelinewatch.png',
+    image: './assets/projects/pipelinewatch.png',
     link: 'https://pipelinewatch.ethanshrestha.ch',
     github: 'https://github.com/EthanUltra/pipelinewatch',
     categories: ['js', 'react'],
@@ -303,7 +303,7 @@ const projects = [
     title: 'Quiz Application',
     description:
       'A quiz app featuring 10 randomly selected questions with a 60-second time limit.',
-    image: './dd791850-6dcb-41c1-8be5-6685d859daf2.png',
+    image: './assets/projects/quiz-app.png',
     link: 'https://quizapplication.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/QuizApplication',
     categories: ['html', 'js', 'python', 'java'],
@@ -313,7 +313,7 @@ const projects = [
     title: 'Kanban Board Web App',
     description:
       'A collaborative Kanban board that lets you create projects, add tasks and manage workflow in real-time.',
-    image: './fcb6bbc2-ee4f-4066-8b5b-1e89f1f942ba.png',
+    image: './assets/projects/kanban-board.png',
     link: 'http://kanban.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/KanbanBoard',
     categories: ['html', 'js'],
@@ -323,7 +323,7 @@ const projects = [
     title: 'Maze Game',
     description:
       'A fun maze game built with Java that generates random mazes with increasing difficulty.',
-    image: './75894aa4-7fb5-4ef9-a07d-e63831abfeb0.png',
+    image: './assets/projects/maze-game.png',
     link: 'http://mazegame.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/MazeGame',
     categories: ['java'],
@@ -333,7 +333,7 @@ const projects = [
     title: 'Speed Type Test',
     description:
       'Measure your typing speed with random sentences and track your performance over time.',
-    image: './5def5eae-1591-4b1d-8a33-32cb4bfe9f23.png',
+    image: './assets/projects/speed-type.png',
     link: 'http://speedtype.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/SpeedTypeTest',
     categories: ['html', 'js'],
@@ -343,7 +343,7 @@ const projects = [
     title: 'Chess with AI',
     description:
       'Play chess against an AI opponent with adjustable difficulty levels and an interactive scoreboard.',
-    image: './8e0106c5-280b-4c5d-af7d-865fcd0ab522.png',
+    image: './assets/projects/chess-ai.png',
     link: 'http://chess.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/ChessWithAI',
     categories: ['java'],
@@ -353,7 +353,7 @@ const projects = [
     title: 'Table of Elements',
     description:
       'An interactive periodic table that allows you to search and filter elements with detailed information.',
-    image: './6f78b590-093b-4cb2-8e5f-dd803ed9e323.png',
+    image: './assets/projects/periodic-table.png',
     link: 'http://tableofelements.ethanshrestha.ch/',
     github: 'https://github.com/EthanUltra/InteractivePeriodicTable',
     categories: ['html', 'js'],
