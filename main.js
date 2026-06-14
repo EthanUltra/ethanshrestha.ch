@@ -28,7 +28,9 @@ window.doGTranslate = function (lang_pair) {
 function hideGoogleTranslateBanner() {
   const banner = document.querySelector('iframe.goog-te-banner-frame')
   if (banner) banner.style.display = 'none'
-  const container = document.querySelector('.goog-te-banner-frame.skiptranslate')
+  const container = document.querySelector(
+    '.goog-te-banner-frame.skiptranslate'
+  )
   if (container) container.style.display = 'none'
   document.body.style.top = '0px'
 }
@@ -230,8 +232,13 @@ const projects = [
     github: 'https://github.com/EthanUltra/Blue-Team-Log-Analysis-Lab',
     categories: ['cybersecurity'],
     tech: [
-      'React', 'Node.js', 'Express', 'Log Analysis',
-      'Cybersecurity', 'MITRE ATT&CK', 'Render',
+      'React',
+      'Node.js',
+      'Express',
+      'Log Analysis',
+      'Cybersecurity',
+      'MITRE ATT&CK',
+      'Render',
     ],
   },
   {
@@ -243,8 +250,15 @@ const projects = [
     github: 'https://github.com/EthanUltra/secure-auth-web',
     categories: ['react'],
     tech: [
-      'React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma',
-      'JWT', 'Argon2', 'Neon Database', 'Railway',
+      'React',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Prisma',
+      'JWT',
+      'Argon2',
+      'Neon Database',
+      'Railway',
     ],
   },
   {
@@ -256,8 +270,15 @@ const projects = [
     github: 'https://github.com/EthanUltra/codereview',
     categories: ['react'],
     tech: [
-      'React', 'Vite', 'Python', 'FastAPI', 'Anthropic Claude',
-      'Monaco Editor', 'Docker', 'Render', 'Tailwind CSS',
+      'React',
+      'Vite',
+      'Python',
+      'FastAPI',
+      'Anthropic Claude',
+      'Monaco Editor',
+      'Docker',
+      'Render',
+      'Tailwind CSS',
     ],
   },
   {
@@ -269,8 +290,18 @@ const projects = [
     github: 'https://github.com/EthanUltra/WatchTower',
     categories: ['react', 'cybersecurity'],
     tech: [
-      'React', 'Vite', 'Python', 'FastAPI', 'SQLite', 'WebSockets',
-      'MITRE ATT&CK', 'Recharts', 'Docker', 'Render', 'Hostpoint', 'Tailwind CSS',
+      'React',
+      'Vite',
+      'Python',
+      'FastAPI',
+      'SQLite',
+      'WebSockets',
+      'MITRE ATT&CK',
+      'Recharts',
+      'Docker',
+      'Render',
+      'Hostpoint',
+      'Tailwind CSS',
     ],
   },
   {
@@ -282,8 +313,17 @@ const projects = [
     github: 'https://github.com/EthanUltra/chatsphere',
     categories: ['js', 'react'],
     tech: [
-      'React', 'Vite', 'Node.js', 'Express', 'PostgreSQL',
-      'Prisma', 'WebSockets', 'Zustand', 'Docker', 'Render', 'Tailwind CSS',
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Prisma',
+      'WebSockets',
+      'Zustand',
+      'Docker',
+      'Render',
+      'Tailwind CSS',
     ],
   },
   {
@@ -295,10 +335,20 @@ const projects = [
     github: 'https://github.com/EthanUltra/pipelinewatch',
     categories: ['js', 'react'],
     tech: [
-      'React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Prisma',
-      'GitHub Actions', 'Docker', 'Docker Hub', 'Jest', 'Render', 'Tailwind CSS',
+      'React',
+      'Vite',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Prisma',
+      'GitHub Actions',
+      'Docker',
+      'Docker Hub',
+      'Jest',
+      'Render',
+      'Tailwind CSS',
     ],
-  }
+  },
 ]
 
 function createProjectCard(project) {
@@ -312,9 +362,11 @@ function createProjectCard(project) {
       <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
         <div class="space-x-2">
           <a href="${project.link}" target="_blank" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700">Live Demo</a>
-          ${project.github
-            ? `<a href="${project.github}" target="_blank" class="px-3 py-1 bg-gray-600 text-white rounded-md text-sm hover:bg-gray-700">Source Code</a>`
-            : ''}
+          ${
+            project.github
+              ? `<a href="${project.github}" target="_blank" class="px-3 py-1 bg-gray-600 text-white rounded-md text-sm hover:bg-gray-700">Source Code</a>`
+              : ''
+          }
         </div>
       </div>
     </div>
@@ -323,7 +375,10 @@ function createProjectCard(project) {
       <p class="text-gray-400 text-sm mb-3">${project.description}</p>
       <div class="flex flex-wrap gap-2">
         ${project.tech
-          .map((t) => `<span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">${t}</span>`)
+          .map(
+            (t) =>
+              `<span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">${t}</span>`
+          )
           .join('')}
       </div>
     </div>
@@ -342,7 +397,9 @@ function loadProjects() {
 function filterProjects() {
   const activeBtn = document.querySelector('.filter-btn.active')
   const filter = activeBtn ? activeBtn.getAttribute('data-filter') : 'all'
-  const searchValue = document.getElementById('projectSearch').value.toLowerCase()
+  const searchValue = document
+    .getElementById('projectSearch')
+    .value.toLowerCase()
   document.querySelectorAll('.project-card').forEach((card) => {
     const categories = card.getAttribute('data-categories')
     const title = card.querySelector('h3').textContent.toLowerCase()
@@ -364,7 +421,9 @@ function initProjectControls() {
       filterProjects()
     })
   })
-  document.getElementById('projectSearch').addEventListener('input', filterProjects)
+  document
+    .getElementById('projectSearch')
+    .addEventListener('input', filterProjects)
 }
 
 // ─── Typed hero tagline ───────────────────────────────────────────────────────
@@ -386,7 +445,10 @@ function type() {
   } else {
     charIndex++
   }
-  document.getElementById('typedText').textContent = currentPhrase.substring(0, charIndex)
+  document.getElementById('typedText').textContent = currentPhrase.substring(
+    0,
+    charIndex
+  )
   let delay = isDeleting ? 50 : 100
   if (!isDeleting && charIndex === currentPhrase.length) {
     delay = 2000
@@ -431,16 +493,24 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // Theme toggles
-  document.getElementById('toggleThemeDesktop').addEventListener('click', function () {
-    toggleTheme(this)
-  })
-  document.getElementById('toggleThemeMobile').addEventListener('click', function () {
-    toggleTheme(this)
-  })
+  document
+    .getElementById('toggleThemeDesktop')
+    .addEventListener('click', function () {
+      toggleTheme(this)
+    })
+  document
+    .getElementById('toggleThemeMobile')
+    .addEventListener('click', function () {
+      toggleTheme(this)
+    })
 
   // Effects toggles
-  document.getElementById('toggleEffectsDesktop').addEventListener('click', toggleEffects)
-  document.getElementById('toggleEffectsMobile').addEventListener('click', toggleEffects)
+  document
+    .getElementById('toggleEffectsDesktop')
+    .addEventListener('click', toggleEffects)
+  document
+    .getElementById('toggleEffectsMobile')
+    .addEventListener('click', toggleEffects)
 
   // Language dropdown close listeners
   document.querySelectorAll('#langMenuDesktop button').forEach((button) => {
@@ -455,29 +525,31 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   // Contact form
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault()
-    const form = e.target
-    const formData = new FormData(form)
-    fetch(form.action, {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: formData,
+  document
+    .getElementById('contactForm')
+    .addEventListener('submit', function (e) {
+      e.preventDefault()
+      const form = e.target
+      const formData = new FormData(form)
+      fetch(form.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset()
+            document.getElementById('successMessage').classList.remove('hidden')
+            document.getElementById('errorMessage').classList.add('hidden')
+          } else {
+            throw new Error('Network response was not ok')
+          }
+        })
+        .catch(() => {
+          document.getElementById('successMessage').classList.add('hidden')
+          document.getElementById('errorMessage').classList.remove('hidden')
+        })
     })
-      .then((response) => {
-        if (response.ok) {
-          form.reset()
-          document.getElementById('successMessage').classList.remove('hidden')
-          document.getElementById('errorMessage').classList.add('hidden')
-        } else {
-          throw new Error('Network response was not ok')
-        }
-      })
-      .catch(() => {
-        document.getElementById('successMessage').classList.add('hidden')
-        document.getElementById('errorMessage').classList.remove('hidden')
-      })
-  })
 
   // Disable right-click context menu
   document.addEventListener('contextmenu', (e) => e.preventDefault())
