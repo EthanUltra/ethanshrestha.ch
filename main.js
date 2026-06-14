@@ -298,67 +298,7 @@ const projects = [
       'React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Prisma',
       'GitHub Actions', 'Docker', 'Docker Hub', 'Jest', 'Render', 'Tailwind CSS',
     ],
-  },
-  {
-    title: 'Quiz Application',
-    description:
-      'A quiz app featuring 10 randomly selected questions with a 60-second time limit.',
-    image: './assets/projects/quiz-app.png',
-    link: 'https://quizapplication.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/QuizApplication',
-    categories: ['html', 'js', 'python', 'java'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'Python', 'Docker', 'AWS'],
-  },
-  {
-    title: 'Kanban Board Web App',
-    description:
-      'A collaborative Kanban board that lets you create projects, add tasks and manage workflow in real-time.',
-    image: './assets/projects/kanban-board.png',
-    link: 'http://kanban.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/KanbanBoard',
-    categories: ['html', 'js'],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
-  },
-  {
-    title: 'Maze Game',
-    description:
-      'A fun maze game built with Java that generates random mazes with increasing difficulty.',
-    image: './assets/projects/maze-game.png',
-    link: 'http://mazegame.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/MazeGame',
-    categories: ['java'],
-    tech: ['Java', 'JavaFX'],
-  },
-  {
-    title: 'Speed Type Test',
-    description:
-      'Measure your typing speed with random sentences and track your performance over time.',
-    image: './assets/projects/speed-type.png',
-    link: 'http://speedtype.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/SpeedTypeTest',
-    categories: ['html', 'js'],
-    tech: ['JavaScript', 'HTML', 'CSS'],
-  },
-  {
-    title: 'Chess with AI',
-    description:
-      'Play chess against an AI opponent with adjustable difficulty levels and an interactive scoreboard.',
-    image: './assets/projects/chess-ai.png',
-    link: 'http://chess.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/ChessWithAI',
-    categories: ['java'],
-    tech: ['Java', 'Minimax'],
-  },
-  {
-    title: 'Table of Elements',
-    description:
-      'An interactive periodic table that allows you to search and filter elements with detailed information.',
-    image: './assets/projects/periodic-table.png',
-    link: 'http://tableofelements.ethanshrestha.ch/',
-    github: 'https://github.com/EthanUltra/InteractivePeriodicTable',
-    categories: ['html', 'js'],
-    tech: ['HTML', 'CSS', 'JavaScript'],
-  },
+  }
 ]
 
 function createProjectCard(project) {
