@@ -1,0 +1,14 @@
+<IfModule mod_headers.c>
+  # Force HTTPS on repeat visits
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Stop MIME sniffing
+  Header set X-Content-Type-Options "nosniff"
+  # Prevent clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+  # Control how much referrer info is sent
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Restrict powerful browser features (you don't need them on a portfolio)
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  # Content Security Policy
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://translate.google.com https://translate-pa.googleapis.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https://tryhackme.com https://www.gstatic.com; connect-src 'self' https://formspree.io https://tryhackme.com https://translate-pa.googleapis.com; frame-src https://translate.google.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none';"
+</IfModule>
