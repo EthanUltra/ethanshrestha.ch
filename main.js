@@ -553,6 +553,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Disable right-click context menu
   document.addEventListener('contextmenu', (e) => e.preventDefault())
+
+  // Smooth scroll for nav links
+  function smoothScrollTo(targetY, duration) {
+    const startY = window.pageYOffset
+    const distance = targetY - startY
+    let startTime = null
+
+    function step(currentTime) {
+      if (!startTime) startTime = currentTime
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      // Ease in-out
+      const ease =
+        progress < 0.5
+          ? 2 * progress * progress
+          : -1 + (4 - 2 * progress) * progress
+      window.scrollTo(0, startY + distance * ease)
+      if (elapsed < duration) requestAnimationFrame(step)
+    }
+
+    requestAnimationFrame(step)
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'))
+      if (target) {
+        e.preventDefault()
+        const navHeight = document.getElementById('mainNav').offsetHeight
+        const top =
+          target.getBoundingClientRect().top + window.pageYOffset - navHeight
+        smoothScrollTo(top, 700) // 700ms duration
+      }
+    })
+  })
 })
 
 document.addEventListener('visibilitychange', () => {
