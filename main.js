@@ -247,7 +247,7 @@ const projects = [
       'A production-style authentication system demonstrating modern security practices including Argon2 password hashing, rotating JWT refresh tokens, HTTP-only cookies, rate limiting, and account lockout protection. Built as a secure reference implementation for web authentication flows.',
     image: './assets/projects/secure-auth.png',
     link: 'https://auth.ethanshrestha.ch',
-    github: 'https://github.com/EthanUltra/secure-auth-web',
+    github: 'https://github.com/EthanUltra/Secure-Authentication-Patterns',
     categories: ['react'],
     tech: [
       'React',
