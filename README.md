@@ -14,7 +14,7 @@ Personal portfolio and project showcase. Live at **[ethanshrestha.ch](https://et
 
 ## Security
 
-Rated **A+** on [securityheaders.com](https://securityheaders.com/?q=ethanshrestha.ch).
+Rated **A+** on [securityheaders.com](https://securityheaders.com/?q=https%3A%2F%2Fethanshrestha.ch%2F).
 
 | Header | Value |
 |---|---|
